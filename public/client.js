@@ -14,7 +14,8 @@ function animalOut(){
     };
     $.ajax({
       type: 'POST',
-      url: '/postAnimals'
+      url: '/postAnimals',
+      data: objectOut
     });
 }
 
@@ -31,7 +32,7 @@ function getAnimal(){
 function animalDisplay(animal){
   $('#animalIn').val();
   for( var i=0; i<animal.length; i++){
-    $('#outputDiv').append('<p>Animal: ' + animal[i].animal + " , Amount: " + animal[i].animalcount + '</p>');
+    $('#outputDiv').append('<p>Animal: ' + animal[i].animal + " , Amount: " + animal[i].num_of_animal + '</p>');
   }
 }//end animalDisplay
 });//END JQUERY
